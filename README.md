@@ -28,19 +28,19 @@ A video showing the editing process for Elden Ring is here: [https://youtu.be/PZ
 
 ## Screenshots
 
-Dark Souls Remastered:
+**Dark Souls Remastered:**
 ![DSR1](/screenshots/dsr_1.png)
 ![DSR1](/screenshots/dsr_2.png)
 
-Dark Souls II: Scholar of the First Sin:
+**Dark Souls II: Scholar of the First Sin:**
 ![DS2](/screenshots/ds2_1.png)
 ![DS2](/screenshots/ds2_2.png)
 
-Dark Souls III:
+**Dark Souls III:**
 ![DS3](/screenshots/ds3_1.png)
 ![DS3](/screenshots/ds3_2.png)
 
-Elden Ring:
+**Elden Ring:**
 ![ER](/screenshots/er_1.png)
 ![ER](/screenshots/er_2.png)
 
