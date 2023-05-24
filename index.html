@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <script src="aes-js.js"></script>
+    <script src="md5.js"></script>
+    <script src="sl2_editor.js"></script>
+    <script src="ui.js"></script>
+
+    <!-- Import the Cinzel font. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+      body { font: normal 14pt Arial, Helvetica, sans-serif; background: #eeeeee; }
+      div#content {
+	  max-width: 1050px;
+	  background: white;
+	  text-align: left;
+	  margin: 0 auto;
+	  padding: 25px;
+	  border: 1px solid #cccccc;
+      }
+      div.photo { display: inline; }
+      div.photo_row { margin: 50px 0px; text-align: center; }
+      div#div_save { margin: auto; text-align: center; }
+      div#div_status { margin: auto; text-align: center; }
+      input#save_button { font-size: large; }
+      label#status_label { font-weight: bold; font-family: 'Cinzel', serif; font-display: fallback; }
+      p#instructions { font-style: italic; }
+      p#steptwo, p#instructions { display: inline; }
+      p#status { display: inline; font-style: italic; }
+      p#title { text-align: center; font-family: 'Cinzel', serif; font-display: fallback; font-size: 35pt; margin-bottom: 0px; }
+      p#quote { text-align: center; font-family: 'Cinzel', serif; font-display: fallback; margin-top: 0px; margin-bottom: 50px; }
+    </style>
+  </head>
+  <body>
+  <div id="content">
+    <p id="title">Souls Givifier</p>
+    <p id="quote">"Work smarter, not harder."</p>
+    <p class="project_summary">This tool edits save-game files from various FromSoftware games, and grants 1 billion souls/runes in order to max out all stats (STR = 99, DEX = 99, etc.).</p>
+    <p class="project_summary">The following games are currently supported (PC only): Dark Souls Remastered, Dark Souls II: Scholar of the First Sin, Dark Souls III, and Elden Ring.</p>
+    <p class="project_summary">The game files are edited entirely in your browser; no data is ever sent to any server.</p>
+    <br>
+    <hr>
+    <br>
+    <div id="div_status"><label for="status" id="status_label">Status: </label><p id="status"></p></div>
+    <br>
+    <br>
+    <form>
+      <label for="game_type_combobox">1.) Select game type: </label><select id="game_type_combobox"><option value="invalid"></option><option value="dsr">Dark Souls Remastered</option><option value="ds2">Dark Souls II: Scholar of the First Sin</option><option value="ds3">Dark Souls III</option><option value="er">Elden Ring</option></select>
+      <br><br>
+      <p id="steptwo">2.) Instructions for obtaining the *.sl2 file: </p><p id="instructions">(select game type, above)</p>
+      <br><br>
+      <label for="the_file">3.) Select *.sl2 save file: </label><input id="the_file" name="the_file" type="file" accept=".sl2"/>
+      <br><br>
+      <label for="save_slot_combobox">4.) Save slot to modify: </label><select id="save_slot_combobox" disabled="true"><option value="-1">---</option></select>
+      <br><br>
+      <label for="num_souls">5.) Set number of souls to: </label><input id="num_souls" name="num_souls" type="number" value="999999999" min="1" max="999999999"/>
+      <br><br>
+      <label for="backup_checkbox">6.) Acknowledge that you made a backup of your save file: </label><input id="backup_checkbox" type="checkbox"/>
+      <br><br>
+      <div id="div_save"><input id="save_button" type="button" value="Modify Save File" disabled="true"/></div>
+    </form>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <p>Source code to this tool is available on Github: <a href="https://github.com/jtesta/souls_givifier" target="_blank">https://github.com/jtesta/souls_givifier</a>.</p>
+    <p>For a video that shows this save editor in action, see <a href="https://youtu.be/PZCt8gPkr_k">https://youtu.be/PZCt8gPkr_k</a></p>
+    <br>
+    <p>In-game screen shots showing the effects:</p>
+    <div id="photo_gallery">
+      <div class="photo_row">
+	<p>Dark Souls Remastered:</p>
+	<div class="photo"><a href="screenshots/dsr_1.png"><img class="preview" src="screenshots/dsr_1_small.png" loading="lazy"/></a></div>
+	<div class="photo"><a href="screenshots/dsr_2.png"><img class="preview" src="screenshots/dsr_2_small.png" loading="lazy"/></a></div>
+      </div>
+      <div class="photo_row">
+	<p>Dark Souls II: Scholar of the First Sin:</p>
+	<div class="photo"><a href="screenshots/ds2_1.png"><img class="preview" src="screenshots/ds2_1_small.png" loading="lazy"/></a></div>
+	<div class="photo"><a href="screenshots/ds2_2.png"><img class="preview" src="screenshots/ds2_2_small.png" loading="lazy"/></a></div>
+      </div>
+      <div class="photo_row">
+	<p>Dark Souls III:</p>
+	<div class="photo"><a href="screenshots/ds3_1.png"><img class="preview" src="screenshots/ds3_1_small.png" loading="lazy"/></a></div>
+	<div class="photo"><a href="screenshots/ds3_2.png"><img class="preview" src="screenshots/ds3_2_small.png" loading="lazy"/></a></div>
+      </div>
+      <div class="photo_row">
+	<p>Elden Ring:</p>
+	<div class="photo"><a href="screenshots/er_1.png"><img class="preview" src="screenshots/er_1_small.png" loading="lazy"/></a></div>
+	<div class="photo"><a href="screenshots/er_2.png"><img class="preview" src="screenshots/er_2_small.png" loading="lazy"/></a></div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
