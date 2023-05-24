@@ -10,9 +10,9 @@ The following games are currently supported (*PC only*):
 
 ## Usage
 
-There are two methods of editing save files.  The main method is using the Javascript code through a browser (a live version is available at X); this has the advantages of being highly accessible to non-technical users and without needing to run shady programs/malware.
+There are two methods of editing save files.  The main method is using the Javascript code through a browser (a live version is available at [https://jtesta.github.io/souls_givifier/](https://jtesta.github.io/souls_givifier/)); this has the advantages of being highly accessible to non-technical users and without needing to run shady programs/malware.
 
-The alternate method is using the Python command-line program (see `souls_givifier.py`).
+The alternate method is using the Python command-line program (see [souls_givifier.py](https://github.com/jtesta/souls_givifier/blob/master/souls_givifier.py)).
 
 The general workflow is:
 1. Start a new game (if you don't have a save file already).
@@ -29,12 +29,20 @@ A video showing the editing process for Elden Ring is here: [https://youtu.be/PZ
 ## Screenshots
 
 Dark Souls Remastered:
+![DSR1](/screenshots/dsr_1.png)
+![DSR1](/screenshots/dsr_2.png)
 
 Dark Souls II: Scholar of the First Sin:
+![DS2](/screenshots/ds2_1.png)
+![DS2](/screenshots/ds2_2.png)
 
 Dark Souls III:
+![DS3](/screenshots/ds3_1.png)
+![DS3](/screenshots/ds3_2.png)
 
 Elden Ring:
+![ER](/screenshots/er_1.png)
+![ER](/screenshots/er_2.png)
 
 ## References
 
