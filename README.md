@@ -8,6 +8,8 @@ The following games are currently supported (*PC only*):
 * Dark Souls III
 * Elden Ring
 
+Note that while no adverse effects were observed during testing, your edited character may (or may not) be penalized in multiplayer in the future.
+
 ## Usage
 
 There are two methods of editing save files.  The main method is using the Javascript code through a browser (a live version is available at [https://jtesta.github.io/souls_givifier/](https://jtesta.github.io/souls_givifier/)); this has the advantages of being highly accessible to non-technical users and without needing to run shady programs/malware.
