@@ -17,12 +17,12 @@
     <style>
       body { font: normal 14pt Arial, Helvetica, sans-serif; background: #eeeeee; }
       div#content {
-	  max-width: 1050px;
-	  background: white;
-	  text-align: left;
-	  margin: 0 auto;
-	  padding: 25px;
-	  border: 1px solid #cccccc;
+          max-width: 1050px;
+          background: white;
+          text-align: left;
+          margin: 0 auto;
+          padding: 25px;
+          border: 1px solid #cccccc;
       }
       div.photo { display: inline; }
       div.photo_row { margin: 50px 0px; text-align: center; }
@@ -35,6 +35,9 @@
       p#status { display: inline; font-style: italic; }
       p#title { text-align: center; font-family: 'Cinzel', serif; font-display: fallback; font-size: 35pt; margin-bottom: 0px; }
       p#quote { text-align: center; font-family: 'Cinzel', serif; font-display: fallback; margin-top: 0px; margin-bottom: 50px; }
+      @media screen and (max-width: 980px) {
+          form > * { font-size: x-large; }
+      }
     </style>
   </head>
   <body>
