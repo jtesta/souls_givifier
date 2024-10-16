@@ -177,7 +177,7 @@ class BND4Entry {
         var _slot_occupancy = {}
         var data = new Uint8Array(this._decrypted_data);
         for (var i = 0; i < 10; i++) {
-            if (data[892 + (496 * i)] == 76) {
+            if (data[892 + (496 * i)] != 0) {
                 var name_offset = 1286 + (496 * i);
                 var name_bytes = this._decrypted_data.slice(name_offset, name_offset + (14 * 2));
 
