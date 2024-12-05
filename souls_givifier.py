@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 '''
 souls_givifier.py
-Copyright 2023  Joe Testa <jtesta@positronsecurity.com>
+Copyright 2023-2024  Joe Testa <jtesta@positronsecurity.com>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms version 3 of the GNU General Public License as
@@ -221,7 +221,7 @@ class BND4Entry:  # pylint: disable=too-many-instance-attributes
 
         _slot_occupancy = {}
         for index in range(0, 10):
-            if self._decrypted_data[892 + (496 * index)] == 76:
+            if self._decrypted_data[892 + (496 * index)] != 0:
                 name_offset = 1286 + (496 * index)
                 name_bytes = self._decrypted_data[name_offset:name_offset + (14 * 2)]
 
